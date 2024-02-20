@@ -1,0 +1,34 @@
+{
+  "name": "nlp-language-recognition",
+  "version": "1.0.0",
+  "description": "In this project, the primary objective is to equip our application with the ability to understand language effectively and be able to process the requests of users intuitively and smoothly.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "webpack:build": "webpack",
+    "webpack:dev": "webpack --watch",
+    "webpack:serve": "webpack serve"
+  },
+  "keywords": [
+    "Natural",
+    "Language",
+    "Processing",
+    "Machine",
+    "Learning",
+    "NLP",
+    "IA"
+  ],
+  "author": "Ismail BASSAOUD | Aelion <ismail.bassaoud@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.17.0",
+    "@tensorflow/tfjs-vis": "^1.5.1"
+  }
+}
