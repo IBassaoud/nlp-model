@@ -1,0 +1,1701 @@
+{
+  "settings": {
+    "languages": [
+      "fr"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "fr"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "fr": {
+        "settings": {
+          "locale": "fr",
+          "trainByDomain": false,
+          "tag": "domain-manager-fr",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "bonjour": {
+            "intent": "salutation.bonjour",
+            "domain": "default"
+          },
+          "salut": {
+            "intent": "salutation.bonjour",
+            "domain": "default"
+          },
+          "le,mond,salut,tout": {
+            "intent": "salutation.bonjour",
+            "domain": "default"
+          },
+          "bonsoir": {
+            "intent": "salutation.bonjour",
+            "domain": "default"
+          },
+          "coucou": {
+            "intent": "salutation.bonjour",
+            "domain": "default"
+          },
+          "au,revoir": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "aller,dois,je,y": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "en,je,m,vais": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "a,bientot,en,je,m,vais": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "adieu": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "a,la,revoyur": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "a,plus,salut,tard": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "a,la,prochain": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "ciao": {
+            "intent": "salutation.aurevoir",
+            "domain": "default"
+          },
+          "%product%,a,ajout,cours,de,la,le,list,produit": {
+            "intent": "stock.add-to-shop-list",
+            "domain": "default"
+          },
+          "%product%,a,ajout,cours,de,la,le,list,m,peux,produit,tu": {
+            "intent": "stock.add-to-shop-list",
+            "domain": "default"
+          },
+          "%product%,a,cours,de,la,le,list,me,peux,produit,rajout,tu": {
+            "intent": "stock.add-to-shop-list",
+            "domain": "default"
+          },
+          "%product%,a,cours,de,il,la,le,list,me,peux,plait,produit,rajout,s,te,tu": {
+            "intent": "stock.add-to-shop-list",
+            "domain": "default"
+          },
+          "%product%,%quantity%,ajout,au,la,le,pour,produit,quantit,stock": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,ajout,au,la,le,m,pour,produit,quantit,stock": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,ajout,au,il,la,le,m,plait,pour,produit,quantit,s,stock,te": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,a,il,moi,mon,plait,rajout,s,stock,te": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,au,il,me,peux,plait,rajout,s,stock,te,tu": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,au,la,le,pour,produit,quantit,rajout,stock": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,au,la,le,me,pour,produit,quantit,rajout,stock": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,au,il,la,le,me,plait,pour,produit,quantit,rajout,s,stock,te": {
+            "intent": "stock.add-to-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,du,la,le,pour,produit,quantit,retir,stock": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,du,il,la,le,plait,pour,produit,quantit,retir,s,stock,te": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,du,il,plait,retir,s,stock,te": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,du,enlev,la,le,pour,produit,quantit,stock": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,du,enlev,il,la,le,plait,pour,produit,quantit,s,stock,te": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,du,enlev,il,plait,s,stock,te": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,il,me,peux,plait,retir,s,stock,te,tu": {
+            "intent": "stock.remove-from-stock",
+            "domain": "default"
+          },
+          "%product%,dan,demand,il,le,produit,rest,s,stock": {
+            "intent": "stock.check-stock",
+            "domain": "default"
+          },
+          "%product%,combien,dan,de,il,le,me,rest,stock": {
+            "intent": "stock.check-stock",
+            "domain": "default"
+          },
+          "%product%,de,le,stock,verif": {
+            "intent": "stock.check-stock",
+            "domain": "default"
+          },
+          "%product%,dan,le,mon,produit,stock,verif": {
+            "intent": "stock.check-stock",
+            "domain": "default"
+          },
+          "%product%,dan,est,le,mon,produit,regard,si,stock": {
+            "intent": "stock.check-stock",
+            "domain": "default"
+          },
+          "%product%,dan,disponibl,est,mon,regard,si,stock": {
+            "intent": "stock.check-stock",
+            "domain": "default"
+          },
+          "%product%,%quantity%,en,stock": {
+            "intent": "stock.ambiguous-stock-query",
+            "domain": "default"
+          },
+          "%product%,%quantity%,de,stock": {
+            "intent": "stock.ambiguous-stock-query",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "salutation.bonjour": "default",
+          "salutation.aurevoir": "default",
+          "stock.add-to-shop-list": "default",
+          "stock.add-to-stock": "default",
+          "stock.remove-from-stock": "default",
+          "stock.check-stock": "default",
+          "stock.ambiguous-stock-query": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Bonjour",
+            "intent": "salutation.bonjour"
+          },
+          {
+            "domain": "default",
+            "utterance": "Salut",
+            "intent": "salutation.bonjour"
+          },
+          {
+            "domain": "default",
+            "utterance": "Salut tout le monde",
+            "intent": "salutation.bonjour"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bonsoir",
+            "intent": "salutation.bonjour"
+          },
+          {
+            "domain": "default",
+            "utterance": "Coucou",
+            "intent": "salutation.bonjour"
+          },
+          {
+            "domain": "default",
+            "utterance": "Au revoir",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Je dois y aller",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Je m'en vais!",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Je m'en vais à bientôt!",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Adieu",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "A la revoyure",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Salut à plus tard",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "A la prochaine",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Ciao",
+            "intent": "salutation.aurevoir"
+          },
+          {
+            "domain": "default",
+            "utterance": "Ajouter le produit %product% à la liste de course",
+            "intent": "stock.add-to-shop-list"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tu peux m'ajouter le produit %product% à la liste de course",
+            "intent": "stock.add-to-shop-list"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tu peux me rajouter le produit %product% à la liste de course",
+            "intent": "stock.add-to-shop-list"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tu peux me rajouter le produit %product% à la liste de course, , s'il te plait",
+            "intent": "stock.add-to-shop-list"
+          },
+          {
+            "domain": "default",
+            "utterance": "Ajouter au stock La quantité %quantity% pour le produit %product%",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "M'ajouter au stock La quantité %quantity% pour le produit %product%",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "M'ajouter au stock La quantité %quantity% pour le produit %product%, s'il te plait",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Rajoute moi %quantity% %product% à mon stock, s'il te plait",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Rajoute moi, s'il te plait, %quantity% %product% à mon stock",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tu peux me rajouter s'il te plait %quantity% %product% au stock",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Rajoute au stock La quantité %quantity% pour le produit %product%",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me rajouter au stock La quantité %quantity% pour le produit %product%",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me rajouter au stock La quantité %quantity% pour le produit %product%, s'il te plait",
+            "intent": "stock.add-to-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Retirer du stock La quantité %quantity% pour le produit %product%",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Retirer du stock La quantité %quantity% pour le produit %product%, s'il te plait",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Retire, s'il te plait, du stock %quantity% %product%",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Enlèver du stock La quantité %quantity% pour le produit %product%",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Enlèver du stock La quantité %quantity% pour le produit %product%, s'il te plait",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Enlèver du stock  %quantity% %product%, s'il te plait",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Enlève, s'il te plait, du stock %quantity% %product%",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tu peux me retirer, s'il te plait, stock %quantity% %product%",
+            "intent": "stock.remove-from-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Demander s'il reste le produit %product% dans le stock",
+            "intent": "stock.check-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Il me reste combien de %product% dans le stock?",
+            "intent": "stock.check-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Vérifie le stock de %product%",
+            "intent": "stock.check-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Vérifie dans mon stock le produit %product%",
+            "intent": "stock.check-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Regarde si le produit %product% est dans mon stock",
+            "intent": "stock.check-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "Regarde si %product% est disponible dans mon stock",
+            "intent": "stock.check-stock"
+          },
+          {
+            "domain": "default",
+            "utterance": "%quantity% %product% en stock",
+            "intent": "stock.ambiguous-stock-query"
+          },
+          {
+            "domain": "default",
+            "utterance": "Stock de %quantity% %product%",
+            "intent": "stock.ambiguous-stock-query"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "fr",
+              "tag": "nlu-fr",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "bonjour": 1,
+              "salut": 1,
+              "tout": 1,
+              "le": 1,
+              "mond": 1,
+              "bonsoir": 1,
+              "coucou": 1,
+              "au": 1,
+              "revoir": 1,
+              "je": 1,
+              "dois": 1,
+              "y": 1,
+              "aller": 1,
+              "m": 1,
+              "en": 1,
+              "vais": 1,
+              "a": 1,
+              "bientot": 1,
+              "adieu": 1,
+              "la": 1,
+              "revoyur": 1,
+              "plus": 1,
+              "tard": 1,
+              "prochain": 1,
+              "ciao": 1,
+              "ajout": 1,
+              "produit": 1,
+              "%product%": 1,
+              "list": 1,
+              "de": 1,
+              "cours": 1,
+              "tu": 1,
+              "peux": 1,
+              "me": 1,
+              "rajout": 1,
+              "s": 1,
+              "il": 1,
+              "te": 1,
+              "plait": 1,
+              "stock": 1,
+              "quantit": 1,
+              "%quantity%": 1,
+              "pour": 1,
+              "moi": 1,
+              "mon": 1,
+              "retir": 1,
+              "du": 1,
+              "enlev": 1,
+              "demand": 1,
+              "rest": 1,
+              "dan": 1,
+              "combien": 1,
+              "verif": 1,
+              "regard": 1,
+              "si": 1,
+              "est": 1,
+              "disponibl": 1
+            },
+            "intents": {
+              "salutation.bonjour": 1,
+              "salutation.aurevoir": 1,
+              "stock.add-to-shop-list": 1,
+              "stock.add-to-stock": 1,
+              "stock.remove-from-stock": 1,
+              "stock.check-stock": 1,
+              "stock.ambiguous-stock-query": 1
+            },
+            "intentFeatures": {
+              "salutation.bonjour": {
+                "bonjour": 1,
+                "salut": 1,
+                "tout": 1,
+                "le": 1,
+                "mond": 1,
+                "bonsoir": 1,
+                "coucou": 1
+              },
+              "salutation.aurevoir": {
+                "au": 1,
+                "revoir": 1,
+                "je": 1,
+                "dois": 1,
+                "y": 1,
+                "aller": 1,
+                "m": 1,
+                "en": 1,
+                "vais": 1,
+                "a": 1,
+                "bientot": 1,
+                "adieu": 1,
+                "la": 1,
+                "revoyur": 1,
+                "salut": 1,
+                "plus": 1,
+                "tard": 1,
+                "prochain": 1,
+                "ciao": 1
+              },
+              "stock.add-to-shop-list": {
+                "ajout": 1,
+                "le": 1,
+                "produit": 1,
+                "%product%": 1,
+                "a": 1,
+                "la": 1,
+                "list": 1,
+                "de": 1,
+                "cours": 1,
+                "tu": 1,
+                "peux": 1,
+                "m": 1,
+                "me": 1,
+                "rajout": 1,
+                "s": 1,
+                "il": 1,
+                "te": 1,
+                "plait": 1
+              },
+              "stock.add-to-stock": {
+                "ajout": 1,
+                "au": 1,
+                "stock": 1,
+                "la": 1,
+                "quantit": 1,
+                "%quantity%": 1,
+                "pour": 1,
+                "le": 1,
+                "produit": 1,
+                "%product%": 1,
+                "m": 1,
+                "s": 1,
+                "il": 1,
+                "te": 1,
+                "plait": 1,
+                "rajout": 1,
+                "moi": 1,
+                "a": 1,
+                "mon": 1,
+                "tu": 1,
+                "peux": 1,
+                "me": 1
+              },
+              "stock.remove-from-stock": {
+                "retir": 1,
+                "du": 1,
+                "stock": 1,
+                "la": 1,
+                "quantit": 1,
+                "%quantity%": 1,
+                "pour": 1,
+                "le": 1,
+                "produit": 1,
+                "%product%": 1,
+                "s": 1,
+                "il": 1,
+                "te": 1,
+                "plait": 1,
+                "enlev": 1,
+                "tu": 1,
+                "peux": 1,
+                "me": 1
+              },
+              "stock.check-stock": {
+                "demand": 1,
+                "s": 1,
+                "il": 1,
+                "rest": 1,
+                "le": 1,
+                "produit": 1,
+                "%product%": 1,
+                "dan": 1,
+                "stock": 1,
+                "me": 1,
+                "combien": 1,
+                "de": 1,
+                "verif": 1,
+                "mon": 1,
+                "regard": 1,
+                "si": 1,
+                "est": 1,
+                "disponibl": 1
+              },
+              "stock.ambiguous-stock-query": {
+                "%quantity%": 1,
+                "%product%": 1,
+                "en": 1,
+                "stock": 1,
+                "de": 1
+              }
+            },
+            "featuresToIntent": {
+              "bonjour": [
+                "salutation.bonjour"
+              ],
+              "salut": [
+                "salutation.bonjour",
+                "salutation.aurevoir"
+              ],
+              "tout": [
+                "salutation.bonjour"
+              ],
+              "le": [
+                "salutation.bonjour",
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock"
+              ],
+              "mond": [
+                "salutation.bonjour"
+              ],
+              "bonsoir": [
+                "salutation.bonjour"
+              ],
+              "coucou": [
+                "salutation.bonjour"
+              ],
+              "au": [
+                "salutation.aurevoir",
+                "stock.add-to-stock"
+              ],
+              "revoir": [
+                "salutation.aurevoir"
+              ],
+              "je": [
+                "salutation.aurevoir"
+              ],
+              "dois": [
+                "salutation.aurevoir"
+              ],
+              "y": [
+                "salutation.aurevoir"
+              ],
+              "aller": [
+                "salutation.aurevoir"
+              ],
+              "m": [
+                "salutation.aurevoir",
+                "stock.add-to-shop-list",
+                "stock.add-to-stock"
+              ],
+              "en": [
+                "salutation.aurevoir",
+                "stock.ambiguous-stock-query"
+              ],
+              "vais": [
+                "salutation.aurevoir"
+              ],
+              "a": [
+                "salutation.aurevoir",
+                "stock.add-to-shop-list",
+                "stock.add-to-stock"
+              ],
+              "bientot": [
+                "salutation.aurevoir"
+              ],
+              "adieu": [
+                "salutation.aurevoir"
+              ],
+              "la": [
+                "salutation.aurevoir",
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "revoyur": [
+                "salutation.aurevoir"
+              ],
+              "plus": [
+                "salutation.aurevoir"
+              ],
+              "tard": [
+                "salutation.aurevoir"
+              ],
+              "prochain": [
+                "salutation.aurevoir"
+              ],
+              "ciao": [
+                "salutation.aurevoir"
+              ],
+              "ajout": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock"
+              ],
+              "produit": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock"
+              ],
+              "%product%": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock",
+                "stock.ambiguous-stock-query"
+              ],
+              "list": [
+                "stock.add-to-shop-list"
+              ],
+              "de": [
+                "stock.add-to-shop-list",
+                "stock.check-stock",
+                "stock.ambiguous-stock-query"
+              ],
+              "cours": [
+                "stock.add-to-shop-list"
+              ],
+              "tu": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "peux": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "me": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock"
+              ],
+              "rajout": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock"
+              ],
+              "s": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock"
+              ],
+              "il": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock"
+              ],
+              "te": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "plait": [
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "stock": [
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock",
+                "stock.ambiguous-stock-query"
+              ],
+              "quantit": [
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "%quantity%": [
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.ambiguous-stock-query"
+              ],
+              "pour": [
+                "stock.add-to-stock",
+                "stock.remove-from-stock"
+              ],
+              "moi": [
+                "stock.add-to-stock"
+              ],
+              "mon": [
+                "stock.add-to-stock",
+                "stock.check-stock"
+              ],
+              "retir": [
+                "stock.remove-from-stock"
+              ],
+              "du": [
+                "stock.remove-from-stock"
+              ],
+              "enlev": [
+                "stock.remove-from-stock"
+              ],
+              "demand": [
+                "stock.check-stock"
+              ],
+              "rest": [
+                "stock.check-stock"
+              ],
+              "dan": [
+                "stock.check-stock"
+              ],
+              "combien": [
+                "stock.check-stock"
+              ],
+              "verif": [
+                "stock.check-stock"
+              ],
+              "regard": [
+                "stock.check-stock"
+              ],
+              "si": [
+                "stock.check-stock"
+              ],
+              "est": [
+                "stock.check-stock"
+              ],
+              "disponibl": [
+                "stock.check-stock"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "fr",
+                "tag": "nlu-fr",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "bonjour",
+                "salut",
+                "tout",
+                "le",
+                "mond",
+                "bonsoir",
+                "coucou",
+                "au",
+                "revoir",
+                "je",
+                "dois",
+                "y",
+                "aller",
+                "m",
+                "en",
+                "vais",
+                "a",
+                "bientot",
+                "adieu",
+                "la",
+                "revoyur",
+                "plus",
+                "tard",
+                "prochain",
+                "ciao",
+                "ajout",
+                "produit",
+                "%product%",
+                "list",
+                "de",
+                "cours",
+                "tu",
+                "peux",
+                "me",
+                "rajout",
+                "s",
+                "il",
+                "te",
+                "plait",
+                "stock",
+                "quantit",
+                "%quantity%",
+                "pour",
+                "moi",
+                "mon",
+                "retir",
+                "du",
+                "enlev",
+                "demand",
+                "rest",
+                "dan",
+                "combien",
+                "verif",
+                "regard",
+                "si",
+                "est",
+                "disponibl"
+              ],
+              "intents": [
+                "salutation.bonjour",
+                "salutation.aurevoir",
+                "stock.add-to-shop-list",
+                "stock.add-to-stock",
+                "stock.remove-from-stock",
+                "stock.check-stock",
+                "stock.ambiguous-stock-query"
+              ],
+              "perceptrons": [
+                [
+                  8.200368881225586,
+                  7.395773410797119,
+                  0.9155189990997314,
+                  -0.8349431157112122,
+                  0.9155189990997314,
+                  8.146872520446777,
+                  8.1153564453125,
+                  -3.1016669273376465,
+                  -2.9359638690948486,
+                  -2.383861541748047,
+                  -1.2216784954071045,
+                  -1.2216784954071045,
+                  -1.2216784954071045,
+                  -1.2498270273208618,
+                  -1.2526054382324219,
+                  -1.161739706993103,
+                  -5.222437381744385,
+                  -0.1144520491361618,
+                  -5.765815734863281,
+                  -1.2249292135238647,
+                  -0.5051628351211548,
+                  -4.032311916351318,
+                  -4.032311916351318,
+                  -0.23489385843276978,
+                  -5.705458641052246,
+                  -0.26105743646621704,
+                  -0.8508971333503723,
+                  -2.208946704864502,
+                  -0.17570462822914124,
+                  -1.2348389625549316,
+                  -0.17570462822914124,
+                  -0.10436689853668213,
+                  -0.10436689853668213,
+                  -0.22902025282382965,
+                  -0.07559995353221893,
+                  -0.2991446256637573,
+                  -0.49176621437072754,
+                  -0.13421736657619476,
+                  -0.13421736657619476,
+                  -1.9800593852996826,
+                  -0.19745507836341858,
+                  -0.5814054608345032,
+                  -0.19745507836341858,
+                  -0.001867111655883491,
+                  -0.3470599055290222,
+                  -0.10730140656232834,
+                  -0.1846192628145218,
+                  -0.044998928904533386,
+                  -0.13499678671360016,
+                  -0.33829182386398315,
+                  -0.7031172513961792,
+                  -0.15990954637527466,
+                  -0.7976227402687073,
+                  -0.2274087518453598,
+                  -0.2274087518453598,
+                  -0.2274087518453598,
+                  -0.0960669219493866,
+                  6.015173976679992
+                ],
+                [
+                  -4.863613605499268,
+                  -4.154464244842529,
+                  -0.8523997068405151,
+                  -2.674488067626953,
+                  -0.8523997068405151,
+                  -4.773933410644531,
+                  -4.747218608856201,
+                  4.513227462768555,
+                  4.864761829376221,
+                  3.9738848209381104,
+                  1.8133704662322998,
+                  1.8133704662322998,
+                  1.8133704662322998,
+                  1.2223149538040161,
+                  1.481677770614624,
+                  2.1639578342437744,
+                  4.0499982833862305,
+                  -3.132927179336548,
+                  9.12095832824707,
+                  2.9540042877197266,
+                  2.3726911544799805,
+                  4.601711750030518,
+                  4.601711750030518,
+                  2.3179726600646973,
+                  9.035149574279785,
+                  -1.607173204421997,
+                  -1.7405956983566284,
+                  -3.2761051654815674,
+                  -1.33759605884552,
+                  -1.33759605884552,
+                  -1.33759605884552,
+                  -0.6572808027267456,
+                  -0.6572808027267456,
+                  -0.06625272333621979,
+                  -0.7887474298477173,
+                  -0.6076451539993286,
+                  -0.6076451539993286,
+                  -0.6076451539993286,
+                  -0.6076451539993286,
+                  -1.8875527381896973,
+                  -0.35204288363456726,
+                  -1.742385983467102,
+                  -0.35204288363456726,
+                  -0.6076451539993286,
+                  -0.798483669757843,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.10604295134544373,
+                  0,
+                  0,
+                  -0.10604295134544373,
+                  -0.10604295134544373,
+                  -0.10604295134544373,
+                  -0.10604295134544373,
+                  4.941756054623374
+                ],
+                [
+                  -0.0028302210848778486,
+                  -0.27419158816337585,
+                  -0.043909162282943726,
+                  0.8612526059150696,
+                  -0.043909162282943726,
+                  -0.0017115682130679488,
+                  -0.0016398258740082383,
+                  -1.1918028593063354,
+                  0,
+                  -0.30341315269470215,
+                  -0.0015710906591266394,
+                  -0.0015710906591266394,
+                  -0.0015710906591266394,
+                  -0.9181942343711853,
+                  -0.30036917328834534,
+                  -0.30036917328834534,
+                  1.0830212831497192,
+                  -0.25286123156547546,
+                  0,
+                  0.3907791078090668,
+                  -0.7514159679412842,
+                  -0.2007908970117569,
+                  -0.2007908970117569,
+                  -0.7437034845352173,
+                  0,
+                  1.3964054584503174,
+                  1.8627132177352905,
+                  0.7290465235710144,
+                  3.2022314071655273,
+                  2.267442464828491,
+                  3.2022314071655273,
+                  0.47062087059020996,
+                  0.47062087059020996,
+                  0.09527700394392014,
+                  0.3691434860229492,
+                  0.05856110155582428,
+                  -0.21796172857284546,
+                  0.08245392888784409,
+                  0.08245392888784409,
+                  -2.4729626178741455,
+                  -1.0268806219100952,
+                  -1.4418643712997437,
+                  -1.0268806219100952,
+                  -0.05806758627295494,
+                  -0.05806758627295494,
+                  -0.03878059610724449,
+                  0,
+                  0,
+                  -0.011946393176913261,
+                  -0.23876526951789856,
+                  -0.23876526951789856,
+                  -0.21636579930782318,
+                  -0.6580429673194885,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.7242093443325757
+                ],
+                [
+                  0,
+                  -0.1809900999069214,
+                  0,
+                  -0.6739833950996399,
+                  0,
+                  0,
+                  0,
+                  4.7953362464904785,
+                  -2.822925329208374,
+                  -0.4698707163333893,
+                  0,
+                  0,
+                  0,
+                  0.21387799084186554,
+                  -2.5026111602783203,
+                  -0.4698707163333893,
+                  1.0899128913879395,
+                  -0.32641303539276123,
+                  0,
+                  -0.04167954996228218,
+                  -0.12869855761528015,
+                  -0.1809900999069214,
+                  -0.1809900999069214,
+                  -0.08631744980812073,
+                  0,
+                  4.779707908630371,
+                  -0.4243842363357544,
+                  0.15594619512557983,
+                  -1.2784847021102905,
+                  -2.522357702255249,
+                  -1.2784847021102905,
+                  0.9578405618667603,
+                  0.9578405618667603,
+                  0.020132753998041153,
+                  4.972043991088867,
+                  -0.019204767420887947,
+                  -0.10341817140579224,
+                  0.04837127774953842,
+                  0.04837127774953842,
+                  1.4350699186325073,
+                  1.5499869585037231,
+                  2.8600687980651855,
+                  1.5499869585037231,
+                  3.4063663482666016,
+                  2.298543691635132,
+                  -4.424858570098877,
+                  -5.007195949554443,
+                  -0.7951416969299316,
+                  -0.03378792852163315,
+                  -0.10376828908920288,
+                  -1.219146490097046,
+                  -0.04942648112773895,
+                  -0.5589791536331177,
+                  -0.5869172811508179,
+                  -0.5869172811508179,
+                  -0.5869172811508179,
+                  -0.40253695845603943,
+                  -1.9278990508931158
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  -1.6018263101577759,
+                  0,
+                  0,
+                  0,
+                  -5.166668891906738,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.6946412324905396,
+                  -1.9161325693130493,
+                  0,
+                  -1.7993826866149902,
+                  0,
+                  0,
+                  0.19484847784042358,
+                  -0.10653945058584213,
+                  0,
+                  0,
+                  -0.09301280975341797,
+                  0,
+                  -3.163079261779785,
+                  -0.8511454463005066,
+                  -0.36495399475097656,
+                  -0.41441574692726135,
+                  -2.1222798824310303,
+                  -0.41441574692726135,
+                  2.5185000896453857,
+                  2.5185000896453857,
+                  1.6375083923339844,
+                  -3.416826009750366,
+                  -0.41596612334251404,
+                  -0.8095467686653137,
+                  0.6239816546440125,
+                  0.6239816546440125,
+                  0.25887852907180786,
+                  1.1268879175186157,
+                  2.370439291000366,
+                  1.1268879175186157,
+                  -0.8683531880378723,
+                  -1.1892280578613281,
+                  5.623267650604248,
+                  6.750783920288086,
+                  5.6123552322387695,
+                  -0.7356334924697876,
+                  -1.138648509979248,
+                  -1.708325982093811,
+                  -0.1967901736497879,
+                  -0.4795909821987152,
+                  -0.08002195507287979,
+                  -0.08002195507287979,
+                  -0.08002195507287979,
+                  -0.0033399148378521204,
+                  -0.3360119692862165
+                ],
+                [
+                  -0.07802558690309525,
+                  -1.1740092039108276,
+                  -1.0532065629959106,
+                  3.4430112838745117,
+                  -1.0532065629959106,
+                  -0.05840154364705086,
+                  -0.05601656809449196,
+                  -0.6835050582885742,
+                  -0.03283962607383728,
+                  -0.08094308525323868,
+                  -0.03146311268210411,
+                  -0.03146311268210411,
+                  -0.03146311268210411,
+                  -0.45514482259750366,
+                  -0.9288243651390076,
+                  -0.02588263526558876,
+                  -1.7956159114837646,
+                  -0.0038672408554702997,
+                  -0.048665400594472885,
+                  -2.0760927200317383,
+                  -0.027973948046565056,
+                  -0.016390176489949226,
+                  -0.016390176489949226,
+                  -0.022374384105205536,
+                  -0.04259827733039856,
+                  -1.4620870351791382,
+                  -1.4502484798431396,
+                  1.567358374595642,
+                  -1.2183419466018677,
+                  1.3160135746002197,
+                  -1.2183419466018677,
+                  -0.6146286129951477,
+                  -0.6146286129951477,
+                  -0.3087233901023865,
+                  -0.8149178624153137,
+                  0.8500348925590515,
+                  0.9856137633323669,
+                  -0.7959859371185303,
+                  -0.7959859371185303,
+                  2.899293899536133,
+                  -0.6434903740882874,
+                  -5.535439968109131,
+                  -0.6434903740882874,
+                  -0.3272724151611328,
+                  0.42574217915534973,
+                  -0.10715905576944351,
+                  -0.17331314086914062,
+                  -0.042917340993881226,
+                  1.6636613607406616,
+                  1.7992411851882935,
+                  2.621105909347534,
+                  0.13380208611488342,
+                  5.004559516906738,
+                  1.6376705169677734,
+                  1.6376705169677734,
+                  1.6376705169677734,
+                  1.9524725675582886,
+                  -0.13840014012029753
+                ],
+                [
+                  -0.199180468916893,
+                  -0.23397928476333618,
+                  -0.023338139057159424,
+                  -4.719342231750488,
+                  -0.023338139057159424,
+                  -0.18583250045776367,
+                  -0.17969846725463867,
+                  -0.9763840436935425,
+                  -0.047389935702085495,
+                  -1.0030442476272583,
+                  -0.07274660468101501,
+                  -0.07274660468101501,
+                  -0.07274660468101501,
+                  -1.317870020866394,
+                  2.789098024368286,
+                  -0.9091163277626038,
+                  -1.1380189657211304,
+                  -0.041312240064144135,
+                  -0.1477971076965332,
+                  -1.4939100742340088,
+                  -0.01670830324292183,
+                  -0.012376513332128525,
+                  -0.012376513332128525,
+                  -0.012692715972661972,
+                  -0.14052027463912964,
+                  -0.9295638799667358,
+                  -1.4351080656051636,
+                  2.339313507080078,
+                  -0.27554941177368164,
+                  2.5691041946411133,
+                  -0.27554941177368164,
+                  -0.42873236536979675,
+                  -0.42873236536979675,
+                  -0.7176612019538879,
+                  -0.9646503925323486,
+                  -2.2007250785827637,
+                  -2.6040079593658447,
+                  -2.2007250785827637,
+                  -2.2007250785827637,
+                  2.661032199859619,
+                  -1.113389492034912,
+                  6.563423156738281,
+                  -1.113389492034912,
+                  -0.6638690829277039,
+                  -1.382477879524231,
+                  -0.8223373889923096,
+                  -1.5760939121246338,
+                  -0.8164091110229492,
+                  0,
+                  -0.3402259051799774,
+                  -1.064913034439087,
+                  -0.3402259051799774,
+                  -2.8306663036346436,
+                  -0.6615554094314575,
+                  -0.6615554094314575,
+                  -0.6615554094314575,
+                  -0.6615554094314575,
+                  0.028866326869375007
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "fr",
+        "Bonjour"
+      ],
+      [
+        "fr",
+        "Salut"
+      ],
+      [
+        "fr",
+        "Salut tout le monde"
+      ],
+      [
+        "fr",
+        "Bonsoir"
+      ],
+      [
+        "fr",
+        "Coucou"
+      ],
+      [
+        "fr",
+        "Au revoir"
+      ],
+      [
+        "fr",
+        "Je dois y aller"
+      ],
+      [
+        "fr",
+        "Je m'en vais!"
+      ],
+      [
+        "fr",
+        "Je m'en vais à bientôt!"
+      ],
+      [
+        "fr",
+        "Adieu"
+      ],
+      [
+        "fr",
+        "A la revoyure"
+      ],
+      [
+        "fr",
+        "Salut à plus tard"
+      ],
+      [
+        "fr",
+        "A la prochaine"
+      ],
+      [
+        "fr",
+        "Ciao"
+      ],
+      [
+        "fr",
+        "Ajouter le produit %product% à la liste de course"
+      ],
+      [
+        "fr",
+        "Tu peux m'ajouter le produit %product% à la liste de course"
+      ],
+      [
+        "fr",
+        "Tu peux me rajouter le produit %product% à la liste de course"
+      ],
+      [
+        "fr",
+        "Tu peux me rajouter le produit %product% à la liste de course, , s'il te plait"
+      ],
+      [
+        "fr",
+        "Ajouter au stock La quantité %quantity% pour le produit %product%"
+      ],
+      [
+        "fr",
+        "M'ajouter au stock La quantité %quantity% pour le produit %product%"
+      ],
+      [
+        "fr",
+        "M'ajouter au stock La quantité %quantity% pour le produit %product%, s'il te plait"
+      ],
+      [
+        "fr",
+        "Rajoute moi %quantity% %product% à mon stock, s'il te plait"
+      ],
+      [
+        "fr",
+        "Rajoute moi, s'il te plait, %quantity% %product% à mon stock"
+      ],
+      [
+        "fr",
+        "Tu peux me rajouter s'il te plait %quantity% %product% au stock"
+      ],
+      [
+        "fr",
+        "Rajoute au stock La quantité %quantity% pour le produit %product%"
+      ],
+      [
+        "fr",
+        "Me rajouter au stock La quantité %quantity% pour le produit %product%"
+      ],
+      [
+        "fr",
+        "Me rajouter au stock La quantité %quantity% pour le produit %product%, s'il te plait"
+      ],
+      [
+        "fr",
+        "Retirer du stock La quantité %quantity% pour le produit %product%"
+      ],
+      [
+        "fr",
+        "Retirer du stock La quantité %quantity% pour le produit %product%, s'il te plait"
+      ],
+      [
+        "fr",
+        "Retire, s'il te plait, du stock %quantity% %product%"
+      ],
+      [
+        "fr",
+        "Enlèver du stock La quantité %quantity% pour le produit %product%"
+      ],
+      [
+        "fr",
+        "Enlèver du stock La quantité %quantity% pour le produit %product%, s'il te plait"
+      ],
+      [
+        "fr",
+        "Enlèver du stock  %quantity% %product%, s'il te plait"
+      ],
+      [
+        "fr",
+        "Enlève, s'il te plait, du stock %quantity% %product%"
+      ],
+      [
+        "fr",
+        "Tu peux me retirer, s'il te plait, stock %quantity% %product%"
+      ],
+      [
+        "fr",
+        "Demander s'il reste le produit %product% dans le stock"
+      ],
+      [
+        "fr",
+        "Il me reste combien de %product% dans le stock?"
+      ],
+      [
+        "fr",
+        "Vérifie le stock de %product%"
+      ],
+      [
+        "fr",
+        "Vérifie dans mon stock le produit %product%"
+      ],
+      [
+        "fr",
+        "Regarde si le produit %product% est dans mon stock"
+      ],
+      [
+        "fr",
+        "Regarde si %product% est disponible dans mon stock"
+      ],
+      [
+        "fr",
+        "%quantity% %product% en stock"
+      ],
+      [
+        "fr",
+        "Stock de %quantity% %product%"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "fr": {
+        "salutation.bonjour": [
+          {
+            "answer": "Bonjour! Comment puis-je vous aider aujourd'hui?"
+          },
+          {
+            "answer": "Salut! En quoi puis-je vous assister?"
+          },
+          {
+            "answer": "Salut! Comment puis-je vous être utile?"
+          },
+          {
+            "answer": "Salut tout le monde! Que puis-je faire pour vous?"
+          }
+        ],
+        "salutation.aurevoir": [
+          {
+            "answer": "Au revoir! N'hésitez pas à revenir si vous avez d'autres questions."
+          },
+          {
+            "answer": "Au revoir! Passez une excellente journée!"
+          },
+          {
+            "answer": "À bientôt! Si vous avez besoin d'aide, je suis là."
+          },
+          {
+            "answer": "Ciao! Prenez soin de vous."
+          }
+        ],
+        "stock.add-to-shop-list": [
+          {
+            "answer": "L'opération d'ajout de %quantity% %product% à la liste de courses a été effectuée avec succès."
+          }
+        ],
+        "stock.add-to-stock": [
+          {
+            "answer": "L'opération d'ajout de %quantity% %product% au stock a été effectuée avec succès."
+          }
+        ],
+        "stock.remove-from-stock": [
+          {
+            "answer": "L'opération de retrait de %quantity% %product% du stock a été effectuée avec succès."
+          }
+        ],
+        "stock.check-stock": [
+          {
+            "answer": "Oui, le produit %product% est toujours disponible dans le stock."
+          },
+          {
+            "answer": "Il reste %quantity% %product% dans le stock."
+          },
+          {
+            "answer": "Vous avez ecore %quantity% %product% dans votre stock."
+          },
+          {
+            "answer": "Il vous reste %quantity% %product% dans votre stock."
+          },
+          {
+            "answer": "Votre stock à l'heure actuelle contient %quantity% %product%."
+          }
+        ],
+        "stock.check-stock.unavailable": [
+          {
+            "answer": "Désolé, le produit %product% n'est plus disponible dans le stock."
+          },
+          {
+            "answer": "Le produit %product% n'est plus disponible en stock."
+          },
+          {
+            "answer": "Le produit %product% n'est plus disponible."
+          },
+          {
+            "answer": "Le produit %product% n'est plus en stock."
+          }
+        ],
+        "stock.ambiguous-stock-query": [
+          {
+            "answer": "Voulez-vous ajouter ou retirer des articles du stock?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {
+    "stock.add-to-shop-list": {
+      "product": {
+        "intent": "stock.add-to-shop-list",
+        "entity": "product",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "stock.add-to-stock": {
+      "quantity": {
+        "intent": "stock.add-to-stock",
+        "entity": "quantity",
+        "mandatory": false,
+        "locales": {}
+      },
+      "product": {
+        "intent": "stock.add-to-stock",
+        "entity": "product",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "stock.remove-from-stock": {
+      "quantity": {
+        "intent": "stock.remove-from-stock",
+        "entity": "quantity",
+        "mandatory": false,
+        "locales": {}
+      },
+      "product": {
+        "intent": "stock.remove-from-stock",
+        "entity": "product",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "stock.check-stock": {
+      "product": {
+        "intent": "stock.check-stock",
+        "entity": "product",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "stock.ambiguous-stock-query": {
+      "quantity": {
+        "intent": "stock.ambiguous-stock-query",
+        "entity": "quantity",
+        "mandatory": false,
+        "locales": {}
+      },
+      "product": {
+        "intent": "stock.ambiguous-stock-query",
+        "entity": "product",
+        "mandatory": false,
+        "locales": {}
+      }
+    }
+  }
+}

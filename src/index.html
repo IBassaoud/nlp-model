@@ -11,5 +11,66 @@
     <header class="header">
         <div class="header-title">NLP - Language Recognition</div>
     </header>
+    <main class="main">
+
+      <!-- Button to start voice recognition -->
+      <button id="startVoiceRecognition" class="main__speach-button" role="button"><span class="text">Start Voice Recognition</span></button>
+
+      <!-- Display the result of the voice recognition -->
+      <div id="voiceResult" class="main__result"></div>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const recognition = new webkitSpeechRecognition(); // For Chrome
+          // const recognition = new SpeechRecognition(); // For Firefox
+          const startButton = document.getElementById('startVoiceRecognition');
+          const voiceResultDiv = document.getElementById('voiceResult');
+  
+          // Function to start voice recognition
+          const startVoiceRecognition = () => {
+            recognition.start();
+            startButton.disabled = true;
+            voiceResultDiv.innerText = 'Listening...';
+          };
+  
+          // Event listener for the start button
+          startButton.addEventListener('click', startVoiceRecognition);
+  
+          recognition.onresult = function (event) {
+            const voiceCommand = event.results[0][0].transcript;
+            console.log('Voice command:', voiceCommand);
+  
+            // Display a loading message while waiting for the server response
+            voiceResultDiv.innerHTML = `<p class="main__loading">Waiting for response...</p>`;
+  
+            // Send the voice command to the server
+            fetch('http://localhost:3000/process-voice', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ voiceCommand }),
+            })
+              .then(response => response.json())
+              .then(data => {
+                console.log('Server response:', data);
+  
+                // Display the voice command and server response
+                voiceResultDiv.innerHTML = `
+                  <p class="main__voice-command">Voice Command: ${voiceCommand}</p>
+                  <p class="main__server-response">Server Response: ${data.response}</p>
+                `;
+                startButton.disabled = false; // Re-enable the start button
+              })
+              .catch(error => {
+                console.error('Error:', error);
+                voiceResultDiv.innerText = `Error: ${error.message}`;
+                startButton.disabled = false; // Re-enable the start button
+              });
+          };
+        });
+      </script>
   </body>
 </html>

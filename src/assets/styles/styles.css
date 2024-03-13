@@ -11,7 +11,6 @@ body {
 }
 
 .header {
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,4 +29,70 @@ body {
   color: transparent;
   background: linear-gradient(60deg, #ec0d78, #ff2b40, #f75735, #fe880e);
   -webkit-background-clip: text;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 2em;
+}
+
+.main__speach-button {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 450px;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.main__speach-button:disabled {
+  background-image: linear-gradient(144deg, #CCCCCC, #999999 50%, #CCCCCC);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+
+  span {
+    background-color: transparent;
+  }
+}
+
+.main__speach-button:active,
+.main__speach-button:hover {
+  outline: 0;
+}
+
+.main__speach-button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 2.5em;
+  border-radius: 6px;
+  transition: 300ms;
+}
+
+.main__speach-button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .main__speach-button {
+    font-size: 24px;
+    min-width: 196px;
+  }
 }
